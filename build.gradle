@@ -13,6 +13,10 @@ group = project.maven_group
 
 repositories {
 	maven {
+		name = 'FabricMC'
+		url = 'https://maven.fabricmc.net'
+	}
+	maven {
 		name = "legacy-fabric"
 		url = "https://maven.legacyfabric.net"
 	}
