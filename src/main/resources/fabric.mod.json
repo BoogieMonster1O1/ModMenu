@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "modmenu",
   "name": "Mod Menu",
-  "version": "$version",
+  "version": "1.8.9",
   "environment": "client",
   "license": "MIT",
   "icon": "assets/modmenu/icons/icon.png",
@@ -40,14 +40,13 @@
     "Lykrast",
     "Pyrofab",
     "UpcraftLP",
-    "swordglowsblue"
+    "swordglowsblue",
+    "HowardZHY"
   ],
   "description": "Adds a mod menu to view the list of mods you have installed.",
   "mixins": [
     "mixins.modmenu.json"
   ],
   "depends": {
-    "legacy-fabric-resource-loader-v1": "*",
-    "minecraft": "${minecraft_version}"
   }
 }
