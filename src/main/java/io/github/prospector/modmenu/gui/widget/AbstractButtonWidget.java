@@ -50,7 +50,7 @@ public class AbstractButtonWidget extends ButtonWidget {
 			GlStateManager.blendFunc( 770, 771 );
 			this.drawTexture( this.x, this.y, 0, 46 + yOffset * 20, this.width / 2, this.height );
 			this.drawTexture( this.x + this.width / 2, this.y, 200 - this.width / 2, 46 + yOffset * 20, this.width / 2, this.height );
-			this.renderBg( client, mouseX, mouseY );
+			this.mouseDragged( client, mouseX, mouseY );
 
 			int color = 16777215;
 			if ( !this.active )

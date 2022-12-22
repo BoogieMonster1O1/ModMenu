@@ -39,7 +39,7 @@ public class DrawingUtil {
 			}
 			Text renderable = strings.get( i );
 			if ( i == lines - 1 && strings.size() > lines ) {
-				renderable = new LiteralText( strings.get( i ).getString() + "..." );
+				renderable = new LiteralText( strings.get( i ).toString() + "..." ); /*getString()**/
 			}
 			int x1 = x;
 			if ( CLIENT.textRenderer.isRightToLeft() ) {
