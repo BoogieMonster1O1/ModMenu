@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "modmenu",
   "name": "Mod Menu",
-  "version": "1.8.9",
+  "version": "${version}",
   "environment": "client",
   "license": "MIT",
   "icon": "assets/modmenu/icons/icon.png",
