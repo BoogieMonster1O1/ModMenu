@@ -84,15 +84,35 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			from components.java
+			// add all the jars that should be included when publishing to maven
+			artifact(remapJar) {
+				builtBy remapJar
+			}
+			artifact(sourcesJar) {
+				builtBy remapSourcesJar
+			}
 		}
 	}
 
 	// select the repositories you want to publish to
 	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
-	}
+		if ( project.hasProperty('legacy_fabric_maven_publish_token') ) {
+			maven {
+				url 'https://maven.legacyfabric.net/'
+				credentials {
+					username 'BobTheBuildSlave'
+					password project.getProperty('legacy_fabric_maven_publish_token')
+				}
+			}
+		} else {
+			maven {
+				maven {
+					name 'Repsy'
+					credentials(PasswordCredentials)
+					url 'https://repsy.io/mvn/enderzombi102/mc'
+				}
+			}
+		}
 }
 modrinth {
 	token = hasProperty('modrinth_token') ? modrinth_token : ''
