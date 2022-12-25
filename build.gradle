@@ -113,6 +113,7 @@ publishing {
 				}
 			}
 		}
+	}
 }
 modrinth {
 	token = hasProperty('modrinth_token') ? modrinth_token : ''
