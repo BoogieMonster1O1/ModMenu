@@ -12,6 +12,7 @@
     "modmenu.badge.clientsideOnly": "本機",
     "modmenu.badge.deprecated": "已棄用",
     "modmenu.badge.library": "函式庫",
+    "modmenu.badge.modpack": "模組包",
     "modmenu.toggleFilterOptions": "檢視",
     "modmenu.showingMods.n": "已顯示 %s 個模組",
     "modmenu.showingMods.1": "已顯示 %s 個模組",

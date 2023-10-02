@@ -81,6 +81,7 @@
     "modmenu.showingMods.1": "Ein Mod angezeigt",
     "modmenu.showingMods.n": "%s Mods angezeigt",
     "modmenu.toggleFilterOptions": "Filteroptionen umschalten",
+    "modmenu.searchTerms.modpack": "Modpack Paket",
     "modmenu.badge.deprecated": "Veraltet",
     "modmenu.loaded.420.secret": "(%s geladen...brenn es)",
     "modmenu.loaded.69.secret": "(%s geladen...nice)",

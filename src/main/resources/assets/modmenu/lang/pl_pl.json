@@ -13,6 +13,7 @@
     "modmenu.badge.clientsideOnly": "Klient",
     "modmenu.badge.deprecated": "Porzucone",
     "modmenu.badge.library": "Biblioteka",
+    "modmenu.badge.modpack": "Paczka modów",
     "modmenu.toggleFilterOptions": "Zmień ustawienia filtrów",
     "modmenu.showingMods.n": "Pokazuję %s modyfikacji",
     "modmenu.showingMods.1": "Pokazuję %s modyfikację",

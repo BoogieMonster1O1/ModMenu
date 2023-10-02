@@ -12,6 +12,7 @@ modmenu.search=Buscar mods
 modmenu.badge.clientsideOnly=Cliente
 modmenu.badge.deprecated=Obsoleta
 modmenu.badge.library=Librería
+modmenu.badge.modpack=Paquete de mods
 modmenu.toggleFilterOptions=Alternar opciones de filtros
 modmenu.showingMods.n=Mostrando %s mods
 modmenu.showingMods.1=Mostrando %s mod

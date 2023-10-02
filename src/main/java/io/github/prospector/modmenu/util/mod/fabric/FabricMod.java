@@ -33,7 +33,7 @@ public class FabricMod implements Mod {
 
 	private final Map<String, String> links = new HashMap<>();
 
-	public FabricMod( ModContainer modContainer ) {
+	public FabricMod( ModContainer modContainer, Set<String> modpackMods ) {
 		this.container = modContainer;
 		this.metadata = modContainer.getMetadata();
 
@@ -109,6 +109,9 @@ public class FabricMod implements Mod {
 		}
 		if ( "deprecated".equals( CustomValueUtil.getString( "fabric-api:module-lifecycle", metadata ).orElse( null ) ) ) {
 			badges.add( Badge.DEPRECATED );
+		}
+		if ( modpackMods.contains( getId() ) && !"builtin".equals( this.metadata.getType() ) ) {
+			badges.add( Badge.MODPACK );
 		}
 		if ( "minecraft".equals( getId() ) ) {
 			badges.add( Badge.MINECRAFT );

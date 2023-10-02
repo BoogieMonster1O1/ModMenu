@@ -25,10 +25,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static io.github.prospector.modmenu.util.TranslationUtil.hasTranslation;
 
@@ -69,6 +66,7 @@ public class ModMenu implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		ModMenuConfigManager.initializeConfig();
+		Set<String> modpackMods = new HashSet<>();
 		Map<String, String> additionalParents = new HashMap<>();
 		// find all entrypoints
 		List<EntrypointContainer<ModMenuApiMarker>> entrypoints = FabricLoader.getInstance().getEntrypointContainers( "modmenu", ModMenuApiMarker.class );
@@ -97,6 +95,7 @@ public class ModMenu implements ClientModInitializer {
 					ModMenuApi api = (com.terraformersmc.modmenu.api.ModMenuApi) marker;
 					configScreenFactories.put( modId, api.getModConfigScreenFactory() );
 					delayedScreenFactoryProviders.add( api.getProvidedConfigScreenFactories() );
+					api.attachModpackBadges( modpackMods::add );
 				} else if ( marker instanceof io.github.prospector.modmenu.api.ModMenuApi ) {
 					/* Legacy API */
 					io.github.prospector.modmenu.api.ModMenuApi api = (io.github.prospector.modmenu.api.ModMenuApi) entrypoint.getEntrypoint();
@@ -115,7 +114,7 @@ public class ModMenu implements ClientModInitializer {
 		// fill mods map
 		for ( ModContainer modContainer : FabricLoader.getInstance().getAllMods() ) {
 			if ( !ModMenuConfig.HIDDEN_MODS.getValue().contains( modContainer.getMetadata().getId() ) ) {
-				Mod mod = new FabricMod( modContainer );
+				Mod mod = new FabricMod( modContainer, modpackMods );
 				MODS.put( mod.getId(), mod );
 			}
 		}

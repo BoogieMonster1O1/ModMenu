@@ -12,6 +12,7 @@ modmenu.search=搜索模组
 modmenu.badge.clientsideOnly=客户端
 modmenu.badge.deprecated=已过时
 modmenu.badge.library=前置
+modmenu.badge.modpack=整合包
 modmenu.toggleFilterOptions=切换过滤选项
 modmenu.showingMods.n=当前显示%s个模组
 modmenu.showingMods.1=当前显示%s个模组

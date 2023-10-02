@@ -106,6 +106,17 @@ public class FabricDummyParentMod implements Mod {
 		if ( id.equals( "fabric" ) || id.equals( "legacy-fabric-api" ) ) {
 			badges.add( Badge.LIBRARY );
 		}
+
+		boolean modpackChildren = true;
+		for ( Mod mod : ModMenu.PARENT_MAP.get( this ) ) {
+			if ( !mod.getBadges().contains( Badge.MODPACK ) ) {
+				modpackChildren = false;
+			}
+		}
+		if ( modpackChildren ) {
+			badges.add( Badge.MODPACK );
+		}
+
 		return badges;
 	}
 

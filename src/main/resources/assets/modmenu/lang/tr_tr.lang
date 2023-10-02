@@ -20,6 +20,7 @@ modmenu.showingModsLibraries.1.1=%s mod ve %s kütüphane gösteriliyor
 modmenu.badge.library=Kütüphane
 modmenu.badge.clientsideOnly=İstemci
 modmenu.badge.deprecated=Eskimiş
+modmenu.badge.modpack=Mod Paketi
 modmenu.modIdToolTip=Mod kimliği: %s
 modmenu.authorPrefix=%s tarafından geliştirildi
 modmenu.config=Ayarları Düzenle

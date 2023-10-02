@@ -67,6 +67,7 @@ public interface Mod {
 		public static final Badge CLIENT = register( "modmenu.badge.clientsideOnly", 0xff2b4b7c, 0xff0e2a55, null );
 		public static final Badge DEPRECATED = register( "modmenu.badge.deprecated", 0xff841426, 0xff530C17, "deprecated" );
 		public static final Badge FORGE = register( "modmenu.badge.forge", 0xff1f2d42, 0xff101721, "forge" );
+		public static final Badge MODPACK = register( "modmenu.badge.modpack", 0xff7a2b7c, 0xff510d54, null );
 		public static final Badge MINECRAFT = register( "modmenu.badge.minecraft", 0xff6f6c6a, 0xff31302f, null );
 
 		private final Text text;

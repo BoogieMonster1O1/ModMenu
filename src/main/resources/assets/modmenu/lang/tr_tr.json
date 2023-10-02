@@ -21,6 +21,7 @@
     "modmenu.badge.library": "Kütüphane",
     "modmenu.badge.clientsideOnly": "İstemci",
     "modmenu.badge.deprecated": "Eskimiş",
+    "modmenu.badge.modpack": "Mod Paketi",
     "modmenu.dropInfo.line1": "Modları eklemek için bu pencereye",
     "modmenu.dropInfo.line2": "dosyaları sürükleyip bırakın",
     "modmenu.dropConfirm": "Seçili mod veya modları mod dizinine kopyalamak istiyor musun?",

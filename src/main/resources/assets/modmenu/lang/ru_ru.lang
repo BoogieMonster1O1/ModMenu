@@ -12,6 +12,7 @@ modmenu.search=Поиск модов
 modmenu.badge.clientsideOnly=Клиент
 modmenu.badge.deprecated=Устарел
 modmenu.badge.library=Библиотека
+modmenu.badge.modpack=Сборка модов
 modmenu.toggleFilterOptions=Фильтры
 modmenu.showingMods.n=Показано %s модов
 modmenu.showingMods.1=Показан %s мод

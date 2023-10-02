@@ -12,6 +12,7 @@ modmenu.search=모드 검색
 modmenu.badge.clientsideOnly=클라이언트
 modmenu.badge.deprecated=구식
 modmenu.badge.library=라이브러리
+modmenu.badge.modpack=モジュールパッケージ
 modmenu.toggleFilterOptions=필터 옵션 전환
 modmenu.showingMods.n=모드 %s개 표시
 modmenu.showingMods.1=모드 %s개 표시
