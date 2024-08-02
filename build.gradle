@@ -79,11 +79,9 @@ publishing {
 			}
 		} else {
 			maven {
-				maven {
-					name 'Repsy'
-					credentials(PasswordCredentials)
-					url 'https://repsy.io/mvn/enderzombi102/mc'
-				}
+				name 'Repsy'
+				credentials(PasswordCredentials)
+				url 'https://repsy.io/mvn/enderzombi102/mc'
 			}
 		}
 	}

@@ -5,19 +5,19 @@
   "version": "${version}",
   "environment": "client",
   "license": "MIT",
-  "icon": "assets/modmenu/icons/icon.png",
+  "icon": "assets/modmenu/icon.png",
   "entrypoints": {
     "client": [
-      "io.github.prospector.modmenu.ModMenu"
+      "com.terraformersmc.modmenu.ModMenu"
     ],
     "modmenu": [
-      "io.github.prospector.modmenu.ModMenuModMenuCompat"
+      "com.terraformersmc.modmenu.ModMenuModMenuCompat"
     ]
   },
   "contact": {
-    "homepage": "https://modrinth.com/mod/modmenu",
-    "sources": "https://github.com/TerraformersMC/ModMenu",
-    "issues": "https://github.com/TerraformersMC/ModMenu/issues"
+    "homepage": "https://modrinth.com/mod/legacy-mod-menu",
+    "sources": "https://github.com/BoogieMonster1O1/ModMenu",
+    "issues": "https://github.com/BoogieMonster1O1/ModMenu/issues"
   },
   "authors": [
     "Prospector",

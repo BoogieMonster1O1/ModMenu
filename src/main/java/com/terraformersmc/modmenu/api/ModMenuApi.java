@@ -1,14 +1,15 @@
 package com.terraformersmc.modmenu.api;
 
-import com.google.common.collect.ImmutableMap;
-import io.github.prospector.modmenu.ModMenu;
-import io.github.prospector.modmenu.gui.ModsScreen;
+import com.terraformersmc.modmenu.ModMenu;
+import com.terraformersmc.modmenu.gui.ModsScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 
+import java.util.Collections;
 import java.util.Map;
+import java.util.function.Consumer;
 
-public interface ModMenuApi extends io.github.prospector.modmenu.util.ModMenuApiMarker {
+public interface ModMenuApi {
 
 	/**
 	 * Used for creating a {@link Screen} instance of the Mod Menu
@@ -28,7 +29,7 @@ public interface ModMenuApi extends io.github.prospector.modmenu.util.ModMenuApi
 	 * @return The text that would be displayed on a Mods button
 	 */
 	static Text createModsButtonText() {
-		return ModMenu.createModsButtonText();
+		return ModMenu.createModsButtonText(true);
 	}
 
 	/**
@@ -40,6 +41,16 @@ public interface ModMenuApi extends io.github.prospector.modmenu.util.ModMenuApi
 	 */
 	default ConfigScreenFactory<?> getModConfigScreenFactory() {
 		return screen -> null;
+	}
+
+	/**
+	 * Used for mods that have their own update checking logic.
+	 * By returning your own {@link UpdateChecker} instance, you can override ModMenus built-in update checking logic.
+	 *
+	 * @return An {@link UpdateChecker} or <code>null</code> if ModMenu should handle update checking.
+	 */
+	default UpdateChecker getUpdateChecker() {
+		return null;
 	}
 
 	/**
@@ -55,6 +66,26 @@ public interface ModMenuApi extends io.github.prospector.modmenu.util.ModMenuApi
 	 * @return a map of mod ids to screen factories.
 	 */
 	default Map<String, ConfigScreenFactory<?>> getProvidedConfigScreenFactories() {
-		return ImmutableMap.of();
+		return Collections.emptyMap();
+	}
+
+	/**
+	 * Used to provide update checkers for other mods. A mod registering its own
+	 * update checker will take priority over any provided ones should both exist.
+	 *
+	 * @return a map of mod ids to update checkers.
+	 */
+	default Map<String, UpdateChecker> getProvidedUpdateCheckers() {
+		return Collections.emptyMap();
+	}
+
+	/**
+	 * Used to mark mods with a badge indicating that they are
+	 * provided by a modpack.
+	 * <p>
+	 * Builtin mods such as `minecraft` cannot be marked as
+	 * provided by a modpack.
+	 */
+	default void attachModpackBadges(Consumer<String> consumer) {
 	}
 }
